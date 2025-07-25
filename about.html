@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About Me | Rahul Govil</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Rahul Govil</h1>
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+    <nav id="navMenu">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="skills.html">Skills</a>
+      <a href="projects.html">Projects</a>
+      <a href="resume.html">Resume</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>About Me</h2>
+    <p>I am a data science enthusiast with a background in software engineering and a love for learning. I enjoy tackling complex problems and building impactful solutions.</p>
+  </main>
+
+  <footer>
+    © 2025 Rahul Govil
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById("navMenu");
+      nav.classList.toggle("show");
+    }
+
+    // Close menu when clicking outside
+    document.addEventListener("click", function (e) {
+      const nav = document.getElementById("navMenu");
+      const icon = document.querySelector(".menu-icon");
+      if (!nav.contains(e.target) && !icon.contains(e.target)) {
+        nav.classList.remove("show");
+      }
+    });
+  </script>
+</body>
+</html>
