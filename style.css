@@ -1,30 +1,52 @@
 /* style.css */
-body {
-  font-family: 'Inter', sans-serif;
+
+/* Ensure full height layout */
+html, body {
+  height: 100%;
   margin: 0;
+  padding: 0;
+}
+
+/* Flex layout to push footer down */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+  font-family: 'Inter', sans-serif;
   background: #f9f9f9;
   color: #333;
 }
+
+/* Header & Footer styling */
 header, footer {
   background: #0d1117;
   color: white;
   padding: 1.5rem;
   text-align: center;
 }
+
+/* Navigation links */
 nav a {
   margin: 0 1rem;
   color: white;
   text-decoration: none;
   font-weight: 500;
 }
+
 nav a:hover {
   text-decoration: underline;
 }
+
+/* Main content expands to fill vertical space */
 main {
+  flex: 1;
   max-width: 800px;
   margin: 2rem auto;
   padding: 1rem;
 }
+
+/* Heading styles */
 h1, h2 {
   color: #111;
 }
