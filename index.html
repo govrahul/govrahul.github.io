@@ -8,7 +8,8 @@
   <!-- Header/Nav -->
   <header>
   <h1>Rahul Govil</h1>
-  <nav>
+  <div class="menu-icon" onclick="toggleMenu()">☰</div>
+  <nav id="navMenu">
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
     <a href="skills.html">Skills</a>
@@ -18,12 +19,26 @@
   </nav>
 </header>
 
-
   <main>
     <h2>Welcome</h2>
     <p>Hi, I'm Rahul! I'm passionate about using data and technology to solve real-world problems. Explore my site to learn more!</p>
   </main>
 
   <footer>© 2025 Rahul Govil</footer>
+  <script>
+  function toggleMenu() {
+    const nav = document.getElementById("navMenu");
+    nav.classList.toggle("show");
+  }
+    
+  document.addEventListener("click", function (e) {
+    const menu = document.getElementById("navMenu");
+    const icon = document.querySelector(".menu-icon");
+    if (!menu.contains(e.target) && !icon.contains(e.target)) {
+      menu.classList.remove("show");
+    }
+  });
+</script>
+
 </body>
 </html>
