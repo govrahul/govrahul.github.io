@@ -1,3 +1,5 @@
+/* style.css */
+
 /* General layout */
 html, body {
   height: 100%;
@@ -14,16 +16,21 @@ body {
   color: #333;
 }
 
-/* Header & footer */
+/* Header & footer layout */
 header, footer {
   background: #0d1117;
   color: white;
   padding: 1.5rem;
   position: relative;
-  text-align: center;
 }
 
-/* Hamburger icon always shown */
+/* Make header text (h1) centered */
+header h1 {
+  text-align: center;
+  margin: 0;
+}
+
+/* Hamburger icon — absolute in top-right */
 .menu-icon {
   position: absolute;
   top: 1.5rem;
@@ -33,26 +40,26 @@ header, footer {
   color: white;
 }
 
-/* Nav menu: hidden by default */
+/* Navigation hidden by default */
 nav {
   display: none;
   flex-direction: column;
-  background: #0d1117;
   position: absolute;
   top: 4.5rem;
   right: 1.5rem;
-  border: 1px solid #444;
+  background: #0d1117;
   padding: 1rem;
+  border: 1px solid #444;
   border-radius: 0.5rem;
   z-index: 100;
 }
 
-/* Show menu when class "show" is added */
+/* Show menu on toggle */
 nav.show {
   display: flex;
 }
 
-/* Nav link styling */
+/* Nav links */
 nav a {
   color: white;
   text-decoration: none;
@@ -65,7 +72,7 @@ nav a:hover {
   text-decoration: underline;
 }
 
-/* Main content */
+/* Main content styling */
 main {
   flex: 1;
   max-width: 800px;
@@ -73,7 +80,7 @@ main {
   padding: 1rem;
 }
 
-/* Headings */
 h1, h2 {
   color: #111;
 }
+
